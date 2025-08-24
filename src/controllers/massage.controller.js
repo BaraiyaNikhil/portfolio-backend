@@ -2,8 +2,8 @@ const Massage = require("../models/massage.model");
 
 exports.createMassage = async (req, res) => {
   try {
-    const { firstName, lastName, email, phone, message } = req.body;
-    const newMassage = new Massage({ firstName, lastName, email, phone, message });
+    const { firstName, lastName, email, phone, massage } = req.body;
+    const newMassage = new Massage({ firstName, lastName, email, phone, massage });
     await newMassage.save();
     res.status(201).json(newMassage);
   } catch (error) {

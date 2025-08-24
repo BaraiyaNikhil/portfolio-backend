@@ -5,7 +5,7 @@ const massageSchema = new mongoose.Schema({
   lastName: { type: String, minlength: 3, required: true },
   email: { type: String, unique: true, required: true },
   phone: { type: String, unique: true, required: true },
-  message: { type: String, required: true, trim : true}
+  massage: { type: String, required: true, trim : true}
 });
 
 module.exports = mongoose.model("Massage", massageSchema);
